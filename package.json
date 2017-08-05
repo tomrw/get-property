@@ -2,7 +2,7 @@
   "name": "get-property",
   "version": "1.0.0",
   "description": "Retrieve a property of an object using a string",
-  "main": "src/index.js",
+  "main": "src/get-property.js",
   "scripts": {
     "test": "mocha test"
   },
