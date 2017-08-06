@@ -5,7 +5,8 @@
   "main": "src/get-property.js",
   "scripts": {
     "test": "mocha test",
-    "watch-tests": "mocha test -w"
+    "watch-tests": "mocha test -w",
+    "lint": "eslint src test"
   },
   "author": "Tom West",
   "devDependencies": {
