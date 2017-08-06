@@ -53,8 +53,36 @@ describe('get-property', () => {
 				b: 'c'
 			}
 		};
-
 		const result = getProperty(obj, 'a.d');
+
+		expect(result).to.be.undefined;
+	});
+
+	it('should return undefined when an invalid path is passed', () => {
+		const obj = {
+			a: {
+				b: 'c'
+			}
+		};
+		const result = getProperty(obj, '.');
+
+		expect(result).to.be.undefined;
+	});
+
+	it('should return undefined when no path is passed', () => {
+		const obj = {
+			a: {
+				b: 'c'
+			}
+		};
+
+		const result = getProperty(obj, '');
+
+		expect(result).to.be.undefined;
+	});
+
+	it('should return undefined when no object is passed', () => {
+		const result = getProperty();
 
 		expect(result).to.be.undefined;
 	});
