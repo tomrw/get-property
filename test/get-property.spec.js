@@ -86,4 +86,19 @@ describe('get-property', () => {
 
 		expect(result).to.be.undefined;
 	});
+
+	describe('when being configured', () => {
+		it('should be able to use an alternate delimiter', () => {
+			const obj = {
+				a: {
+					b: 1
+				}
+			};
+			const result = getProperty(obj, 'a-b', {
+				delimiter: '-'
+			});
+
+			expect(result).to.equal(1);
+		});
+	});
 });
