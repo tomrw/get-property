@@ -100,5 +100,16 @@ describe('get-property', () => {
 
 			expect(result).to.equal(1);
 		});
+
+		it('should be able to specify the default value if a property does not exist', () => {
+			const obj = {
+				a: 1
+			};
+			const result = getProperty(obj, 'b.c.d.e.f', {
+				defaultValue: null
+			});
+
+			expect(result).to.be.null;
+		});
 	});
 });
